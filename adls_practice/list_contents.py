@@ -11,12 +11,13 @@ def main():
     # Define the container name
     container_name = "azurepublicdataset"
 
-    # List all blobs in the container
+    # Get all blobs in the container
     container_client = blob_service_client.get_container_client(container_name)
 
-    print(f"Listing files in container: {container_name}")
+    # List all .csv.gz blobs in the container
+    print(f"Listing .csv.gz files in container: {container_name}")
     for blob in container_client.list_blobs():
-        # Check if blob (file) name ends in 'csv.gv'
+        # Check if blob (file) name ends in '.csv.gz'
         if (blob.name.endswith('.csv.gz')):
             print(blob.name)
 
