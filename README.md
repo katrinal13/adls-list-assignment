@@ -5,6 +5,7 @@ This project lists `.csv.gz` files from a public Azure Blob Storage container us
 ## How to run
 - Go to Actions tab
 - Trigger "Run ADLS List Script"
+- Click `Run workflow`
 
 ## Output
 Prints all `.csv.gz` files in the dataset.
